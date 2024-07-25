@@ -16,15 +16,14 @@ pipeline {
 		  sh 'mvn test'
 		}
 	  }
+	}
 	  
 		  
 		  post {
 				archiveArtifacts artifacts: 'target/**.jar', followSymlinks: false
 
-			}
-		}
-	  }
+			
 
-}
+            }
 
 }
