@@ -18,7 +18,7 @@ pipeline {
 		  
 		  post {
 				archiveArtifacts artifacts: 'target/**.jar', followSymlinks: false
-				junit stdioRetention: '', testResults: 'target/surefire-reports/*.xml'
+
 			}
 		}
 	  }
