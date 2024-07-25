@@ -179,7 +179,7 @@ JSONAssert.assertEquals(
                 Pattern pattern = Pattern.compile("\\A" + expectedUrlPattern + "\\z");
                 assertTrue(pattern.matcher(result.getResponse().getRedirectedUrl()).find());
             }
-        }
+        };
     }
 
 }
