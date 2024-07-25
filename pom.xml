@@ -6,7 +6,7 @@
 	<groupId>com.khoubyari</groupId>
 	<artifactId>spring-boot-rest-example</artifactId>
 	<version>0.5.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<description>Example project demonstrating REST APIs implemented using Spring Boot, in-memory database, embedded Tomcat, Swagger, JsonPath, Hamcrest and MockMVC</description>
 
 	<parent>
@@ -25,22 +25,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-actuator</artifactId>
 		</dependency>
-                <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-    <!-- JUnit 5 -->
-         <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <scope>test</scope>
-    </dependency>
-    <!-- MockMvc (if using) -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
+
 		<!-- web development, including Tomcat and spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -104,6 +89,11 @@
 			<version>2.5.0</version>
 		</dependency>
 		<dependency>
+                       <groupId>org.junit.jupiter</groupId>
+                       <artifactId>junit-jupiter-engine</artifactId>
+                       <scope>test</scope>
+                </dependency>
+		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.5.0</version>
@@ -121,12 +111,6 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.0</version>
 		</dependency>
-		<dependency>
-                       <groupId>junit</groupId>
-                       <artifactId>junit</artifactId>
-                       <version>4.13.2</version>
-                       <scope>test</scope>
-                </dependency>
 	</dependencies>
 
 	<build>
@@ -140,7 +124,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<version>3.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -150,7 +134,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>3.3.1</version>
 				<configuration>
 					<addResources>false</addResources>
 				</configuration>
